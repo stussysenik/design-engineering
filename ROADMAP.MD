@@ -32,6 +32,8 @@ Use this repo for:
 - adapters
 - examples
 
+This is a separate repository, not a nested folder inside `design-engineering`.
+
 ## Phase 1: Clarify And Focus
 
 Goal: make the direction unambiguous.
@@ -43,6 +45,7 @@ Tasks:
 - finalize `ROADMAP.MD`
 - align the GitHub profile story with the motion-system direction
 - stop spawning unrelated public experiments
+- lock the framework stance: no Redwood on the critical path for `toolmotion v1`
 
 Definition of done:
 
@@ -68,6 +71,7 @@ Rules:
 - every demo must support reduced motion
 - every demo must be keyboard-aware where relevant
 - do not add decorative motion
+- do not add framework complexity unless the patterns demand it
 
 Definition of done:
 
@@ -135,6 +139,11 @@ Do not start a new flagship until `toolmotion` has:
 - a clear README
 - one strong essay
 
+Also:
+
+- do not switch frameworks in the middle of validation
+- do not move into Redwood until the core package and React adapter are credible
+
 ## What Comes After
 
 Once `toolmotion` is credible, choose one of:
@@ -144,6 +153,7 @@ Once `toolmotion` is credible, choose one of:
 - build a CLI or devtools companion
 - integrate `toolmotion` into a real product app
 
+That real product app may use Redwood.
+
 Do not decide that early.
 Earn the next move by finishing the current one.
-

@@ -67,6 +67,7 @@ It proves your point of view about how serious software should feel.
 5. eventually a cross-platform reference point
 
 It is not just an animation package.
+It is also not a framework bet.
 
 It should answer:
 
@@ -81,6 +82,7 @@ It should answer:
 Build the system first.
 Make the semantics solid.
 Prove them in real tool surfaces.
+Keep the surface area small and focused.
 
 ### Project 2
 
@@ -101,6 +103,9 @@ Good directions:
 A workflow and artifact interface for AI and engineering teams.
 
 This is still a good downstream product, but it should come after `toolmotion` gives you a reusable interaction language.
+
+That downstream product could be a good place to use Redwood.
+The system itself should stay simpler.
 
 ## Why This Direction Matters
 
@@ -164,4 +169,3 @@ The account should read:
 not:
 
 `interesting builder with many experiments`
-

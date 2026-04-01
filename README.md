@@ -19,6 +19,7 @@ That means:
 
 - `design-engineering` is strategy, specs, writing, and roadmap
 - `toolmotion` is the implementation repo
+- `toolmotion` lives in its own separate repository
 
 ## Core Thesis
 
@@ -80,8 +81,30 @@ We are building:
 3. a demo app proving those patterns
 4. framework adapters only after the semantics are stable
 
+## Framework Decision
+
+`toolmotion` should be super-focused.
+
+That means:
+
+- core package: framework-agnostic `TypeScript`
+- first adapter: `React`
+- first demo environment: `Vite`
+- later product consumer: maybe `Redwood`
+
+`Redwood` is not rejected.
+It is just not the foundation of the system itself.
+
+Use Redwood later for:
+
+- a product app that consumes `toolmotion`
+- a workflow console
+- an AI/devtools application
+
+Do not use Redwood to define the initial public motion system.
+
 ## Immediate Next Step
 
-`cd toolmotion`
+Open the separate `toolmotion` repository.
 
 That is where the current product work lives.

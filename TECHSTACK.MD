@@ -29,6 +29,30 @@ Do not start with:
 
 Those may be useful later, but they are not the right `v1` stack for community adoption.
 
+## Decision Summary
+
+The stack decision is:
+
+- `TypeScript` is the core
+- `React` is the first public adapter
+- `Vite` is the first demo environment
+- `Redwood` is downstream, not foundational
+
+`toolmotion` should stay super-focused.
+
+It should not become:
+
+- a framework thesis
+- a full-stack app
+- a Redwood showcase
+- a multi-runtime experiment
+
+It should become:
+
+- a reusable motion system
+- a pattern library for serious software
+- an easy thing for frontend engineers to try
+
 ## The Product Shape
 
 `toolmotion` is not a component library first.
@@ -139,6 +163,14 @@ Use SvelteKit later only if you want:
 
 Redwood is better for product applications than for a motion-system library.
 
+If the question is:
+
+`Should Redwood be the core of toolmotion?`
+
+The answer is:
+
+`No.`
+
 Use Redwood when you build a full product like:
 
 - `Operator`
@@ -146,6 +178,21 @@ Use Redwood when you build a full product like:
 - a real internal-tool or product app
 
 Do not use it for `toolmotion v1`.
+
+Why:
+
+- `toolmotion` needs the smallest possible public surface area
+- the core should be easy to publish and easy to adopt
+- React users should be able to try it without entering a larger framework story
+- framework coupling too early weakens the community value
+
+So the correct shape is:
+
+- core system first
+- React adapter second
+- real product app later
+
+That later product app can absolutely be built in Redwood if it is the right product choice.
 
 ## What About Remix?
 
@@ -265,7 +312,7 @@ For now:
 - `TypeScript` is the core
 - `React + motion` is the first adapter
 - `Vite` is the demo environment
-- `Lua`, `Go`, `Zig`, `Elixir`, `Redwood`, `SvelteKit`, and `Remix` stay out of the critical path
+- `Redwood` is reserved for downstream product apps
+- `Lua`, `Go`, `Zig`, `Elixir`, `SvelteKit`, and `Remix` stay out of the critical path
 
 That is how we keep the project focused and legible.
-
